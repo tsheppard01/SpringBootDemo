@@ -1,0 +1,31 @@
+databaseChangeLog:
+- changeSet:
+    id: 20200708_3
+    author: terences
+    changes:
+      - createTable:
+          tableName: person
+          schemaName: demo_app
+          columns:
+          - column:
+              name: id
+              type: bigserial
+              autoIncrement: true
+              constraints:
+                primaryKey: true
+                nullable: false
+          - column:
+              name: forename
+              type: text
+              constraints:
+                nullbale: true
+          - column:
+              name: surname
+              type: text
+              constraints:
+                nullable: true
+          - column:
+              name: dob
+              type: text
+              constraints:
+                nullable: true

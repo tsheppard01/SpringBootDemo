@@ -1,0 +1,15 @@
+version: "3"
+services:
+
+  demo_app_db:
+    build:
+      context: "./images/postgres"
+      dockerfile: Dockerfile_postgres
+    container_name: postgresql
+    ports:
+      - "54320:5432"
+    environment:
+      POSTGRES_USER: "$SPRINGDEMO_DB_USERNAME"
+      POSTGRES_PASSWORD: "$SPRINGDEMO_DB_PASSWORD"
+      POSTGRES_DB: "$SPRINGDEMO_DB_NAME"
+      PGDATA: /pgdata/demo_app

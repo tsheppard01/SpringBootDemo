@@ -1,0 +1,12 @@
+databaseChangeLog:
+- changeSet:
+    id: 20200708_1
+    author: terences
+    runInTransaction: false
+    changes:
+    - sql:
+      comment: create the application schema
+      sql: CREATE SCHEMA demo_app;
+    - rollback:
+        comment: drop the application schema
+        sql: DROP SCHEMA demo_app;
